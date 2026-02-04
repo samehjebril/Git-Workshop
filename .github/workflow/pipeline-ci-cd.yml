@@ -1,0 +1,14 @@
+name: pipeline_session15
+
+on:
+  push:
+    branches:
+      - main
+
+jobs :
+  job1:
+    runs-on: ubuntu-latest
+    steps: 
+      - run: mkdir folder1
+      - name: list folders
+        run: ls-al
