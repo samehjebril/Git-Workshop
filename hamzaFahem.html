@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ma Page Personnelle</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            padding: 40px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 0.8s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .profile-section {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            margin: 0 auto 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 60px;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .profile-img:hover {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        h1 {
+            color: #333;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #667eea;
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 20px 0;
+            line-height: 1.8;
+            color: #444;
+            text-align: justify;
+            box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .skills {
+            margin: 30px 0;
+        }
+
+        .skills h2 {
+            color: #333;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: center;
+        }
+
+        .tag {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 0.9em;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .tag:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .contact-btn {
+            display: block;
+            margin: 30px auto 0;
+            padding: 15px 40px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            border: none;
+            border-radius: 30px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .contact-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px rgba(102, 126, 234, 0.5);
+        }
+
+        .message {
+            display: none;
+            text-align: center;
+            margin-top: 20px;
+            padding: 15px;
+            background: #4caf50;
+            color: white;
+            border-radius: 10px;
+            animation: slideDown 0.5s ease;
+        }
+
+        @keyframes slideDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 2em;
+            }
+
+            .profile-img {
+                width: 120px;
+                height: 120px;
+                font-size: 50px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-img">👨‍💻</div>
+            <h1>Hamza Maanaoui</h1>
+            <p class="subtitle">Développeur Full Stack & DevOps</p>
+        </div>
+
+        <div class="description">
+            <p>
+                Bienvenue sur ma page personnelle ! Je suis un développeur Full Stack spécialisé dans les technologies
+                Java et Spring Boot, avec une expertise en DevOps et automatisation. Je conçois et déploie des
+                applications
+                robustes et scalables en utilisant les meilleures pratiques de développement moderne.
+            </p>
+            <br>
+            <p>
+                Passionné par l'automatisation et l'intégration continue, j'utilise Docker et Kubernetes pour
+                containeriser
+                mes applications, GitHub Actions pour le CI/CD, et Cypress pour garantir la qualité du code. Mon
+                objectif
+                est de créer des solutions techniques performantes et fiables du développement au déploiement.
+            </p>
+        </div>
+
+        <div class="skills">
+            <h2>Mes Compétences</h2>
+            <div class="skill-tags">
+                <span class="tag">Java</span>
+                <span class="tag">Spring Boot</span>
+                <span class="tag">Kubernetes</span>
+                <span class="tag">Docker</span>
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">HTML/CSS</span>
+                <span class="tag">Cypress</span>
+                <span class="tag">CI/CD</span>
+                <span class="tag">DevOps</span>
+            </div>
+        </div>
+
+        <button class="contact-btn" onclick="openLinkedIn()">Me Contacter sur LinkedIn</button>
+        <div class="message" id="message">Redirection vers LinkedIn... 🔗</div>
+    </div>
+
+    <script>
+        function openLinkedIn() {
+            const message = document.getElementById('message');
+            message.style.display = 'block';
+
+            setTimeout(() => {
+                window.open('https://www.linkedin.com/in/hamza-maanaoui-9b8ba5237/', '_blank');
+                message.style.display = 'none';
+            }, 1000);
+        }
+
+        // Animation pour les tags au chargement
+        const tags = document.querySelectorAll('.tag');
+        tags.forEach((tag, index) => {
+            tag.style.animation = `fadeIn 0.5s ease ${index * 0.1}s both`;
+        });
+    </script>
+</body>
+
+</html>
