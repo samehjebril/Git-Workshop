@@ -17,7 +17,7 @@ jobs :
 
       - run: mkdir folder1
       - name: list folders
-        run: ls-al
+        run: ls -al
   
   job2:
     runs-on: ubuntu-latest
