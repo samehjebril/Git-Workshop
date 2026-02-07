@@ -25,3 +25,24 @@ jobs :
     steps:
       - name: list folders
         run: ls -al
+
+  job3:
+    runs-on: ubuntu-latest
+    needs : job1
+    steps:
+      - name: list folders
+        run: ls -al
+
+  job4:
+    runs-on: ubuntu-latest
+    needs : job2
+    steps:
+      - name: list folders
+        run: ls -al
+
+  job5:
+    runs-on: ubuntu-latest
+    needs : job3
+    steps:
+      - name: list folders
+        run: ls -al
